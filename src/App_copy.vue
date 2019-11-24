@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-if="true">
+  <div id="app">
     <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
         <div class="kt-header-mobile__logo">
             <a href="index.html">
@@ -55,25 +55,20 @@
                 <!-- end:: Footer -->
             </div>
         </div>
-      <!-- end:: Page -->
     </div>
+    <!-- end:: Page -->
   </div>
-  <!-- <div v-if="true">
-    <Login></Login>
-  </div> -->
 </template>
 
 <script>
 import Navbar from './components/Navbar'
 import Header from './components/Header'
-import Login from './views/Login'
 
 export default {
   name: 'app',
   components: {
     Navbar,
     Header,
-    Login
   }
 }
 </script>>

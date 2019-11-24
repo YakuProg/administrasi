@@ -5,19 +5,14 @@
         <div class="kt-container  kt-container--fluid ">
             <div class="kt-subheader__main">
 
-                <h3 class="kt-subheader__title">Dashboard</h3>
+                <h3 class="kt-subheader__title">Form 1</h3>
 
                 <span class="kt-subheader__separator kt-subheader__separator--v"></span>
-
-                <span class="kt-subheader__desc">#XRS-45670</span>
-
                 
-                <!-- <router-link to="/"> -->
-                  <a href="#" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
-                      Add New
-                  </a>
-                <!-- </router-link> -->
-
+                <a href="#" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                  Add New
+                </a>
+                
                 <div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
                     <input type="text" class="form-control" placeholder="Search order..." id="generalSearch">
                     <span class="kt-input-icon__icon kt-input-icon__icon--right">
@@ -27,12 +22,6 @@
             </div>
             <div class="kt-subheader__toolbar">
                 <div class="kt-subheader__wrapper">
-                    <a href="#" class="btn kt-subheader__btn-secondary">Today</a>
-
-                    <a href="#" class="btn kt-subheader__btn-secondary">Month</a>
-
-                    <a href="#" class="btn kt-subheader__btn-secondary">Year</a>
-
                     <a href="#" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="Select dashboard daterange" data-placement="left">
                         <span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Today</span>&nbsp;
                         <span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">Aug 16</span>
@@ -243,131 +232,6 @@
                   </div>
               </div>
               <!--end:: Widgets/Activity-->
-          </div>
-          <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
-              <!--begin:: Widgets/Inbound Bandwidth-->
-              <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet--height-fluid-half">
-                  <div class="kt-portlet__head kt-portlet__space-x">
-                      <div class="kt-portlet__head-label">
-                          <h3 class="kt-portlet__head-title">
-  Inbound Bandwidth
-  </h3>
-                      </div>
-                      <div class="kt-portlet__head-toolbar">
-                          <a href="#" class="btn btn-label-success btn-sm btn-bold dropdown-toggle" data-toggle="dropdown">
-  Export
-  </a>
-                          <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right">
-                              <ul class="kt-nav">
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-line-chart"></i>
-                                          <span class="kt-nav__link-text">Reports</span>
-                                      </a>
-                                  </li>
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-send"></i>
-                                          <span class="kt-nav__link-text">Messages</span>
-                                      </a>
-                                  </li>
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-pie-chart-1"></i>
-                                          <span class="kt-nav__link-text">Charts</span>
-                                      </a>
-                                  </li>
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-avatar"></i>
-                                          <span class="kt-nav__link-text">Members</span>
-                                      </a>
-                                  </li>
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-settings"></i>
-                                          <span class="kt-nav__link-text">Settings</span>
-                                      </a>
-                                  </li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="kt-portlet__body kt-portlet__body--fluid">
-                      <div class="kt-widget20">
-                          <div class="kt-widget20__content kt-portlet__space-x">
-                              <span class="kt-widget20__number kt-font-brand">670+</span>
-                              <span class="kt-widget20__desc">Successful transactions</span>
-                          </div>
-                          <div class="kt-widget20__chart" style="height:130px;">
-                              <canvas id="kt_chart_bandwidth1"></canvas>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!--end:: Widgets/Inbound Bandwidth-->
-              <div class="kt-space-20"></div>
-              <!--begin:: Widgets/Outbound Bandwidth-->
-              <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet--height-fluid-half">
-                  <div class="kt-portlet__head kt-portlet__space-x">
-                      <div class="kt-portlet__head-label">
-                          <h3 class="kt-portlet__head-title">
-  Outbound Bandwidth
-  </h3>
-                      </div>
-                      <div class="kt-portlet__head-toolbar">
-                          <a href="#" class="btn btn-label-warning btn-sm  btn-bold dropdown-toggle" data-toggle="dropdown">
-  Download
-  </a>
-                          <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right">
-                              <ul class="kt-nav">
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-line-chart"></i>
-                                          <span class="kt-nav__link-text">Reports</span>
-                                      </a>
-                                  </li>
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-send"></i>
-                                          <span class="kt-nav__link-text">Messages</span>
-                                      </a>
-                                  </li>
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-pie-chart-1"></i>
-                                          <span class="kt-nav__link-text">Charts</span>
-                                      </a>
-                                  </li>
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-avatar"></i>
-                                          <span class="kt-nav__link-text">Members</span>
-                                      </a>
-                                  </li>
-                                  <li class="kt-nav__item">
-                                      <a href="#" class="kt-nav__link">
-                                          <i class="kt-nav__link-icon flaticon2-settings"></i>
-                                          <span class="kt-nav__link-text">Settings</span>
-                                      </a>
-                                  </li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="kt-portlet__body kt-portlet__body--fluid">
-                      <div class="kt-widget20">
-                          <div class="kt-widget20__content kt-portlet__space-x">
-                              <span class="kt-widget20__number kt-font-danger">1340+</span>
-                              <span class="kt-widget20__desc">Completed orders</span>
-                          </div>
-                          <div class="kt-widget20__chart" style="height:130px;">
-                              <canvas id="kt_chart_bandwidth2"></canvas>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!--end:: Widgets/Outbound Bandwidth-->
           </div>
       </div>
       <!--End::Row-->
