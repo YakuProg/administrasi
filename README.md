@@ -2,12 +2,12 @@
 
 ## Project setup
 ```
-yarn install
+npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for  (jalankan program)
 ```
-yarn serve
+npm run serve
 ```
 
 ### Compiles and minifies for production

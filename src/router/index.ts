@@ -4,6 +4,7 @@ import HomeLama from '../views/HomeLama.vue';
 import Home from '../views/Home.vue';
 import Form1 from '../views/Form1.vue';
 import Login from '../views/Form1.vue';
+import addData from '../views/addData.vue';
 
 Vue.use(VueRouter);
 
@@ -12,6 +13,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
+  },
+  {
+    path: '/addData',
+    name: 'addData',
+    component: addData,
   },
   {
     path: '/login',
