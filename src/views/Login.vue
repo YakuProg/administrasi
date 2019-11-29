@@ -50,12 +50,12 @@
               </div>
 
               <!--begin::Form-->
-              <form class="kt-form" action="#" novalidate="novalidate" id="kt_login_form">
+              <form class="kt-form" action="#" @submit.prevent="login" novalidate="novalidate" id="kt_login_form">
                 <div class="form-group">
-                  <input class="form-control" type="text" placeholder="Username" name="username" autocomplete="off">
+                  <input class="form-control" v-model="username"  type="text" placeholder="Username" name="username" autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <input class="form-control" type="password" placeholder="Password" name="password"  autocomplete="off">
+                  <input class="form-control" v-model="password" type="password" placeholder="Password" name="password"  autocomplete="off">
                 </div>
                 <!--begin::Action-->
                 <div class="kt-login__actions">
@@ -110,12 +110,24 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
-
 export default {
-  name: 'home',
-  components: {
-    HelloWorld,
+  name: 'login',
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
   },
+  methods: {
+    login() {
+      this.$store.dispatch('retrieveToken', {
+        username: this.username,
+        password: this.password
+      })
+      .then(response => {
+        this.$router.push({ name: 'form1' })
+      });
+    }
+  } 
 };
 </script>
