@@ -1,5 +1,5 @@
-import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/Navbar.vue';
+// import { shallowMount } from '@vue/test-utils';
+// import HelloWorld from '@/components/Navbar.vue';
 
 describe('Navbar.vue', () => {
   it('renders props.msg when passed', () => {

@@ -1,0 +1,40 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "fandu pratama",
+      "username": "fandu",
+      "password": "1"
+    },
+    {
+      "username": "fandu",
+      "password": "1",
+      "id": 2
+    },
+    {
+      "username": "fandu123",
+      "password": "1",
+      "id": 3
+    },
+    {
+      "username": "fandu",
+      "password": "12",
+      "id": 4
+    },
+    {
+      "username": "fandu",
+      "password": "12345",
+      "id": 5
+    },
+    {
+      "username": "fandu",
+      "password": "1",
+      "id": 6
+    },
+    {
+      "username": "fandu",
+      "password": "tes",
+      "id": 7
+    }
+  ]
+}
