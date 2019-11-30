@@ -226,6 +226,7 @@
 <script>
 // @ is an alias to /src
 <<<<<<< HEAD
+<<<<<<< HEAD
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
@@ -233,6 +234,10 @@ export default {
   components: {
     HelloWorld
   }
+=======
+export default {
+  name: 'form1'
+>>>>>>> 9ca73e0b20aa718ad89e677d75c7a397288403f2
 =======
 export default {
   name: 'form1'

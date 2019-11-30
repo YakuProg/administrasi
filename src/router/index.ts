@@ -16,11 +16,14 @@ const routes = [
     meta: {
       requiresAuth: true,
     }
+<<<<<<< HEAD
   },
   {
     path: '/addData',
     name: 'addData',
     component: addData,
+=======
+>>>>>>> 9ca73e0b20aa718ad89e677d75c7a397288403f2
   },
   {
     path: '/login',
