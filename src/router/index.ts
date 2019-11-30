@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Form1 from '../views/Form1.vue';
 import Login from '../views/Login.vue';
 import logout from '../views/Logout.vue';
 import store from '@/store';
@@ -13,36 +12,24 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-    meta: {
-      requiresAuth: true,
-    }
-<<<<<<< HEAD
-  },
-  {
-    path: '/addData',
-    name: 'addData',
-    component: addData,
-=======
->>>>>>> 9ca73e0b20aa718ad89e677d75c7a397288403f2
+    // meta: {
+    //   requiresAuth: true,
+    // }
   },
   {
     path: '/login',
     name: 'login',
     component: Login,
-    meta: {
-      requiresVisitor: true,
-    }
+    // meta: {
+    //   requiresVisitor: true,
+    // }
   },
-  {
-    path: '/logout',
-    name: 'logout',
-    component: logout,
-  },
-  {
-    path: '/form1',
-    name: 'form1',
-    component: Form1,
-  },
+  // {
+  //   path: '/logout',
+  //   name: 'logout',
+  //   component: logout,
+  // },
+
   {
     path: '/about',
     name: 'about',
