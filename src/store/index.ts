@@ -42,11 +42,11 @@ export default new Vuex.Store({
           const id = response.data.id
           localStorage.setItem('access_token', id)
           contex.commit('retrieveToken', id)
-          //resolve(response.data.id)
+          resolve(response.data.id)
         })
         .catch(error => {
-          console.log(error)
-          // reject(error)
+          //console.log(error)
+          reject(error)
         })
       })
     }
