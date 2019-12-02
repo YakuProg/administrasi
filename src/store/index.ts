@@ -45,7 +45,7 @@ export default new Vuex.Store({
           resolve(response.data.id)
         })
         .catch(error => {
-          //console.log(error)
+          // console.log(error)
           reject(error)
         })
       })

@@ -5,6 +5,12 @@
       "name": "fandu pratama",
       "username": "fandu",
       "password": "1"
+    },
+    {
+      "id": 2,
+      "name": "Dwi Pasca",
+      "username": "dwi",
+      "password": "1"
     }
   ]
 }
