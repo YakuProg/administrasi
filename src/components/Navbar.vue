@@ -4,7 +4,8 @@
 			<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
 					<div class="kt-aside__brand-logo">
 							<a href="index.html">
-									<img alt="Logo" src="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/media/logos/logo-light.png" />
+                  ADMINISTRATION
+									<!-- <img alt="Logo" src="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/media/logos/logo-light.png" /> -->
 							</a>
 					</div>
 
@@ -46,10 +47,13 @@
 											<span class="kt-menu__link-text">Dashboard</span>
 										</router-link>
 									</li>
+
 									<li class="kt-menu__section ">
-											<h4 class="kt-menu__section-text">Custom</h4>
+											<h4 class="kt-menu__section-text">REPORT</h4>
 											<i class="kt-menu__section-icon flaticon-more-v2"></i>
 									</li>
+
+                  <!-- Start Report -->
 									<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 												<span class="kt-menu__link-icon">
@@ -61,27 +65,130 @@
 														</g>
 													</svg>
 												</span>
-												<span class="kt-menu__link-text">Applications</span>
+												<span class="kt-menu__link-text">Report</span>
 												<i class="kt-menu__ver-arrow la la-angle-right"></i>
 											</a>
 											<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 													<ul class="kt-menu__subnav">
-															<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Applications</span></span>
+															<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">REPORT</span></span>
 															</li>
-															<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Todo</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+															<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">P / L</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Buku Kas</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 																	<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 																			<ul class="kt-menu__subnav">
-																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/tasks.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Tasks</span></a></li>
-																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/docs.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Docs</span></a></li>
-																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/files.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Files</span></a></li>
+																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/tasks.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Besar</span></a></li>
+																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/docs.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Kecil</span></a></li>
 																			</ul>
 																	</div>
 															</li>
-															<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Inbox</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Buku Bank</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Stok</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Penjualan</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+																	<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+																			<ul class="kt-menu__subnav">
+																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/tasks.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Copra</span></a></li>
+																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/docs.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Goods</span></a></li>
+																			</ul>
+																	</div>
+															</li>
+                              <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Pembelian</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+																	<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+																			<ul class="kt-menu__subnav">
+																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/tasks.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Copra</span></a></li>
+																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/docs.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Goods</span></a></li>
+																			</ul>
+																	</div>
+															</li>
+                              <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Data Pabrik</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+																	<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+																			<ul class="kt-menu__subnav">
+																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/tasks.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Copra</span></a></li>
+																					<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/todo/docs.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">D/O Minyak</span></a></li>
+																			</ul>
+																	</div>
+															</li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Expenses</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Assets</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
 													</ul>
 											</div>
 									</li>
-									<li class="kt-menu__item " aria-haspopup="true">
+                  <!-- End Report -->
+
+                  <!-- Start Cash and Bank -->
+                  <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"/>
+															<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5"/>
+															<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3"/>
+														</g>
+													</svg>
+												</span>
+												<span class="kt-menu__link-text">Cash and Bank</span>
+												<i class="kt-menu__ver-arrow la la-angle-right"></i>
+											</a>
+											<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+													<ul class="kt-menu__subnav">
+															<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Transfer Founds</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Receive Money</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Pay Money</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+													</ul>
+											</div>
+									</li>
+                  <!-- End Cash and Bank -->
+
+                  <!-- Start Sales -->
+                  <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"/>
+															<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5"/>
+															<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3"/>
+														</g>
+													</svg>
+												</span>
+												<span class="kt-menu__link-text">Sales</span>
+												<i class="kt-menu__ver-arrow la la-angle-right"></i>
+											</a>
+											<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+													<ul class="kt-menu__subnav">
+															<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Copra</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Goods</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+													</ul>
+											</div>
+									</li>
+                  <!-- End Sales -->
+
+                  <!-- Start Purchases -->
+                  <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"/>
+															<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5"/>
+															<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3"/>
+														</g>
+													</svg>
+												</span>
+												<span class="kt-menu__link-text">Purchases</span>
+												<i class="kt-menu__ver-arrow la la-angle-right"></i>
+											</a>
+											<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+													<ul class="kt-menu__subnav">
+															<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Copra</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Goods</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+													</ul>
+											</div>
+									</li>
+                  <!-- End Purchases -->
+
+                  <!-- Start Expenses -->
+                  <li class="kt-menu__item " aria-haspopup="true">
 										<router-link class="kt-menu__link " to="/form1">
 											<span class="kt-menu__link-icon">
 												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
@@ -92,11 +199,19 @@
 													</g>
 												</svg>
 											</span>
-											<span class="kt-menu__link-text">Form 1</span>
+											<span class="kt-menu__link-text">Expenses</span>
 										</router-link>
 									</li>
+<<<<<<< HEAD
 									<li class="kt-menu__item " aria-haspopup="true">
 										<router-link class="kt-menu__link " to="/cashiertransaction">
+=======
+                  <!-- Start Expenses -->
+
+                  <!-- Start Contacs -->
+                  <li class="kt-menu__item " aria-haspopup="true">
+										<router-link class="kt-menu__link " to="/form1">
+>>>>>>> c646dbbcc3dccd2896128942111edbb16ab014c6
 											<span class="kt-menu__link-icon">
 												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
 													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -106,9 +221,108 @@
 													</g>
 												</svg>
 											</span>
+<<<<<<< HEAD
 											<span class="kt-menu__link-text">Cashier Transaction</span>
 										</router-link>
 									</li>
+=======
+											<span class="kt-menu__link-text">Contacs</span>
+										</router-link>
+									</li>
+                  <!-- Start Contacs -->
+
+                  <!-- Start Stock -->
+                  <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"/>
+															<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5"/>
+															<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3"/>
+														</g>
+													</svg>
+												</span>
+												<span class="kt-menu__link-text">Stock</span>
+												<i class="kt-menu__ver-arrow la la-angle-right"></i>
+											</a>
+											<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+													<ul class="kt-menu__subnav">
+															<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Copra</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Goods</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+													</ul>
+											</div>
+									</li>
+                  <!-- End Stock -->
+
+                  <!-- Start Notification -->
+                  <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"/>
+															<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5"/>
+															<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3"/>
+														</g>
+													</svg>
+												</span>
+												<span class="kt-menu__link-text">Notification</span>
+												<i class="kt-menu__ver-arrow la la-angle-right"></i>
+											</a>
+											<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+													<ul class="kt-menu__subnav">
+															<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Approved</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Alert</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Crosh Check</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+													</ul>
+											</div>
+									</li>
+                  <!-- End Notification -->
+
+                  <!-- Start Assets -->
+                  <li class="kt-menu__item " aria-haspopup="true">
+										<router-link class="kt-menu__link " to="/form1">
+											<span class="kt-menu__link-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<rect x="0" y="0" width="24" height="24"/>
+														<path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000"/>
+														<rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519) " x="16.3255682" y="2.94551858" width="3" height="18" rx="1"/>
+													</g>
+												</svg>
+											</span>
+											<span class="kt-menu__link-text">Assets</span>
+										</router-link>
+									</li>
+                  <!-- Start Assets -->
+
+                   <!-- Start Setting -->
+                  <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"/>
+															<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5"/>
+															<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3"/>
+														</g>
+													</svg>
+												</span>
+												<span class="kt-menu__link-text">Setting</span>
+												<i class="kt-menu__ver-arrow la la-angle-right"></i>
+											</a>
+											<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+													<ul class="kt-menu__subnav">
+															<li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Data User</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Transaksi Log</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+                              <li class="kt-menu__item " aria-haspopup="true"><a href="custom/apps/inbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Price Setting</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a></li>
+													</ul>
+											</div>
+									</li>
+                  <!-- End Setting -->
+
+>>>>>>> c646dbbcc3dccd2896128942111edbb16ab014c6
 									<li class="kt-menu__section ">
 											<h4 class="kt-menu__section-text">CRUD</h4>
 											<i class="kt-menu__section-icon flaticon-more-v2"></i>

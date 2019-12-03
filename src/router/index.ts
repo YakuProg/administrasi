@@ -3,7 +3,12 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import CashierTransaction from '../views/CashierTransaction.vue';
 import Form1 from '../views/Form1.vue';
+<<<<<<< HEAD
 // import Login from '../views/Login.vue';
+=======
+import CashBank from '../views/CashBank.vue';
+import Login from '../views/Login.vue';
+>>>>>>> c646dbbcc3dccd2896128942111edbb16ab014c6
 import logout from '../views/Logout.vue';
 import store from '@/store';
 
@@ -43,6 +48,11 @@ const routes = [
     path: '/form1',
     name: 'form1',
     component: Form1,
+  },
+  {
+    path: '/cashbank',
+    name: 'cashbank',
+    component: CashBank,
   },
   {
     path: '/about',
