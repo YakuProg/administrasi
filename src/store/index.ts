@@ -31,22 +31,18 @@ export default new Vuex.Store({
       contex.commit('destroyToken')
     },
     retrieveToken(contex, credentials) {
-      console.log("fandu 123 credentials", credentials)
       return new Promise((resolve, reject) => {
-        axios.post('https://mysterious-badlands-53054.herokuapp.com/auth', {
-          name: credentials.username,
-          message: credentials.password,
-          status: "posted"
+        axios.post('https://apiadministrasi.herokuapp.com/login', {
+          username: credentials.username,
+          password: credentials.password
         })
         .then(response => {
-          console.log(response)
-          const token = response.data.message
+          const token = response.data.token
           localStorage.setItem('access_token', token)
           contex.commit('retrieveToken', token)
-          resolve(response.data.message)
+          resolve(response.data.token)
         })
         .catch(error => {
-          // console.log(error)
           reject(error)
         })
       })
