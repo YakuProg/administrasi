@@ -56,23 +56,15 @@
           <div class="kt-portlet">
             <div class="kt-portlet__body">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12">
                   <div class="form-group">
-                    <button type="button" class="btn btn-primary btn-wide">Cashier Cash / Buku Kas</button>
-                  </div>
-                  <div class="form-group">
-                    <button type="button" class="btn btn-primary btn-wide">Cash / Penjualan</button>
-                  </div>
-                  <div class="form-group">
-                    <button type="button" class="btn btn-primary btn-wide">Purchases / Pembelian</button>
-                  </div>
-                  <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-wide">Cashier Cash / Buku Kas</button>.
+                    <button type="button" class="btn btn-primary btn-wide">Cash / Penjualan</button>.
+                    <button type="button" class="btn btn-primary btn-wide">Purchases / Pembelian</button>.
                     <button type="button" class="btn btn-primary btn-wide">Contacts / Buku Panjar</button>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <h1>isi dari pilihan ?</h1>
-                </div>
+                <div class="col-md-12"></div>
               </div>
             </div>
           </div>
@@ -86,6 +78,6 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: "cashiertransaction"
+  name: "CashierTransaction"
 };
 </script>

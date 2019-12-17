@@ -2,6 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import CashierTransaction from '../views/CashierTransaction.vue';
+import Expenses from '../views/expenses/Expenses.vue';
+import AddExpenses from '../views/expenses/AddExpenses.vue';
 import Form1 from '../views/Form1.vue';
 import CashBank from '../views/CashBank.vue';
 import Login from '../views/Login.vue';
@@ -15,26 +17,33 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-    // meta: {
-    //   requiresAuth: true,
-    // }
+    meta: {
+      requiresAuth: true,
+    }
   },
   {
-    path: '/cashiertransaction',
-    name: 'cashiertransaction',
-    component: CashierTransaction,
-    // meta: {
-    //   requiresAuth: true,
-    // }
+    path: '/CashierTransaction',
+    name: 'CashierTransaction',
+    component: CashierTransaction
   },
-  // {
-  //   path: '/login',
-  //   name: 'login',
-  //   component: Login,
-  //   meta: {
-  //     requiresVisitor: true,
-  //   }
-  // },
+  {
+    path: '/Expenses',
+    name: 'expenses',
+    component: Expenses
+  },
+  {
+    path: '/addExpenses',
+    name: 'addexpenses',
+    component: AddExpenses
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+    meta: {
+      requiresVisitor: true,
+    }
+  },
   {
     path: '/logout',
     name: 'logout',
