@@ -2,8 +2,6 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
 
-// Note : Run write db `json-server db.json`
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
