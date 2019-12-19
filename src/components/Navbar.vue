@@ -626,7 +626,7 @@
           <!-- end Cashier Transaction -->
 
           <li class="kt-menu__item" aria-haspopup="true">
-            <router-link class="kt-menu__link" to="/form1">
+            <router-link class="kt-menu__link" to="/Contacts">
               <span class="kt-menu__link-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -5,6 +5,8 @@ import CashierTransaction from '../views/CashierTransaction.vue';
 import Expenses from '../views/expenses/Expenses.vue';
 import AddExpenses from '../views/expenses/AddExpenses.vue';
 import ManagementUser from '../views/ManagementUser.vue';
+import Contacts from '../views/contacts/Contacts.vue';
+import AddContacts from '../views/contacts/AddContacts.vue';
 import Form1 from '../views/Form1.vue';
 import CashBank from '../views/CashBank.vue';
 import Login from '../views/Login.vue';
@@ -31,6 +33,16 @@ const routes = [
     path: '/ManagementUser',
     name: 'ManagementUser',
     component: ManagementUser
+  },
+  {
+    path: '/Contacts',
+    name: 'Contacts',
+    component: Contacts
+  },
+  {
+    path: '/AddContacts',
+    name: 'AddContacts',
+    component: AddContacts
   },
   {
     path: '/Expenses',
