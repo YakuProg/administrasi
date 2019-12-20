@@ -76,13 +76,15 @@
           </div>
         </div>        
         <div class="kt-subheader__toolbar">
-          <a href="../../../.html" class=""></a>
-          <a href="add-project.html" class="btn btn-label-brand btn-bold">
-            Add Project
-          </a>
+          <button  class="btn btn-label-brand btn-bold" data-toggle="modal" data-target="#kt_modal_1">
+            Create New Acc
+          </button>
+          <button class="btn btn-label-brand btn-bold" data-toggle="modal" data-target="#kt_modal_2">
+            New Transaction
+          </button>
           <div class="kt-subheader__wrapper">
             <div class="dropdown dropdown-inline" data-toggle="kt-tooltip-" title="Quick actions" data-placement="left">
-              <a href="#" class="btn btn-icon"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a href="#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <polygon points="0 0 24 0 24 24 0 24"/>
@@ -294,14 +296,6 @@
                                   <a href="#" class="kt-widget__value kt-font-brand">648 Comments</a>
                                 </div>
                               </div>
-
-                              <div class="kt-widget__section">
-                                <button type="button" class="btn btn-brand btn-sm btn-upper btn-bold">Create New Acc</button>                                 
-                              </div>
-
-                              <div class="kt-widget__section">
-                                <button type="button" class="btn btn-brand btn-sm btn-upper btn-bold">New Transaction</button>                                 
-                              </div>
                             </div>
                           </div>
                       </div>
@@ -314,12 +308,108 @@
       <!--End::Section-->
     </div>
     <!-- end:: Content -->
+
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register New Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Name :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Acc Code :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Category :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Start Balence :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="form-control-label">Description :</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end::Modal-->
+
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_modal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Transfer Founds</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Transfer From :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Deposito To :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Amount :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Biaya :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Transaction No :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Transaction Date :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="form-control-label">Memo :</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Attachmants :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end::Modal-->
   </div>				
 </template>
 
 <script>
 // @ is an alias to /src
 export default {
-  name: 'form1'
+  name: 'cashbank'
 };
 </script>

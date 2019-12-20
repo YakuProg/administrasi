@@ -2,8 +2,6 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
 
-// Note : Run write db `json-server db.json`
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -31,21 +29,18 @@ export default new Vuex.Store({
       contex.commit('destroyToken')
     },
     retrieveToken(contex, credentials) {
-
       return new Promise((resolve, reject) => {
-        axios.post('http://localhost:3000/user', {
+        axios.post('https://apiadministrasi.herokuapp.com/login', {
           username: credentials.username,
           password: credentials.password
         })
         .then(response => {
-          // console.log(response)
-          const id = response.data.id
-          localStorage.setItem('access_token', id)
-          contex.commit('retrieveToken', id)
-          resolve(response.data.id)
+          const token = response.data.token
+          localStorage.setItem('access_token', token)
+          contex.commit('retrieveToken', token)
+          resolve(response.data.token)
         })
         .catch(error => {
-          // console.log(error)
           reject(error)
         })
       })

@@ -9,6 +9,7 @@ import Contacts from '../views/contacts/Contacts.vue';
 import AddContacts from '../views/contacts/AddContacts.vue';
 import Form1 from '../views/Form1.vue';
 import CashBank from '../views/CashBank.vue';
+import CashBankPayMoney from '../views/CashBankPayMoney.vue';
 import Login from '../views/Login.vue';
 import logout from '../views/Logout.vue';
 import store from '@/store';
@@ -76,6 +77,11 @@ const routes = [
     path: '/cashbank',
     name: 'cashbank',
     component: CashBank,
+  },
+  {
+    path: '/cashbankpaymoney',
+    name: 'cashbankpaymoney',
+    component: CashBankPayMoney,
   },
   {
     path: '/about',
