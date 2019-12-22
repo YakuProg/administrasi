@@ -97,11 +97,15 @@
         <div class="kt-container kt-container--fluid">
           <div class="kt-footer__copyright">
             2019&nbsp;&copy;&nbsp;
+<<<<<<< HEAD
             <a
               href="http://keenthemes.com/metronic"
               target="_blank"
               class="kt-link"
             >Keenthemes</a>
+=======
+            <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Keenthemes</a>
+>>>>>>> cd940abec771f047633c93f45ad7af6610eb05d7
           </div>
           <div class="kt-footer__menu">
             <a

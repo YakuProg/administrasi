@@ -27,7 +27,11 @@
           </div>
           <div class="kt-grid__item">
             <div class="kt-login__info">
+<<<<<<< HEAD
               <div class="kt-login__copyright">&copy 2018 Metronic</div>
+=======
+              <div class="kt-login__copyright">2018 Metronic</div>
+>>>>>>> cd940abec771f047633c93f45ad7af6610eb05d7
               <div class="kt-login__menu">
                 <a href="#" class="kt-link">Privacy</a>
                 <a href="#" class="kt-link">Legal</a>

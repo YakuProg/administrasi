@@ -1,6 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+<<<<<<< HEAD
+=======
+import CashierTransaction from '../views/CashierTransaction.vue';
+import Expenses from '../views/expenses/Expenses.vue';
+import AddExpenses from '../views/expenses/AddExpenses.vue';
+import ManagementUser from '../views/ManagementUser.vue';
+import Contacts from '../views/contacts/Contacts.vue';
+import AddContacts from '../views/contacts/AddContacts.vue';
+import Form1 from '../views/Form1.vue';
+import CashBank from '../views/CashBank.vue';
+import CashBankPayMoney from '../views/CashBankPayMoney.vue';
+>>>>>>> cd940abec771f047633c93f45ad7af6610eb05d7
 import Login from '../views/Login.vue';
 import logout from '../views/Logout.vue';
 import store from '@/store';
@@ -17,6 +29,36 @@ const routes = [
     // }
   },
   {
+    path: '/CashierTransaction',
+    name: 'CashierTransaction',
+    component: CashierTransaction
+  },
+  {
+    path: '/ManagementUser',
+    name: 'ManagementUser',
+    component: ManagementUser
+  },
+  {
+    path: '/Contacts',
+    name: 'Contacts',
+    component: Contacts
+  },
+  {
+    path: '/AddContacts',
+    name: 'AddContacts',
+    component: AddContacts
+  },
+  {
+    path: '/Expenses',
+    name: 'expenses',
+    component: Expenses
+  },
+  {
+    path: '/addExpenses',
+    name: 'addexpenses',
+    component: AddExpenses
+  },
+  {
     path: '/login',
     name: 'login',
     component: Login,
@@ -30,6 +72,16 @@ const routes = [
   //   component: logout,
   // },
 
+  {
+    path: '/cashbank',
+    name: 'cashbank',
+    component: CashBank,
+  },
+  {
+    path: '/cashbankpaymoney',
+    name: 'cashbankpaymoney',
+    component: CashBankPayMoney,
+  },
   {
     path: '/about',
     name: 'about',
