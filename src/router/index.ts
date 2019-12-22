@@ -21,9 +21,9 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-    // meta: {
-    //   requiresAuth: true,
-    // }
+    meta: {
+      requiresAuth: true,
+    }
   },
   {
     path: '/CashierTransaction',
@@ -59,16 +59,15 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login,
-    // meta: {
-    //   requiresVisitor: true,
-    // }
+    meta: {
+      requiresVisitor: true,
+    }
   },
-  // {
-  //   path: '/logout',
-  //   name: 'logout',
-  //   component: logout,
-  // },
-
+  {
+    path: '/logout',
+    name: 'logout',
+    component: logout,
+  },
   {
     path: '/cashbank',
     name: 'cashbank',
