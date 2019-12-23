@@ -95,7 +95,6 @@
                 <div
                   class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"
                 ></div>
-
                 <div class="form-group row form-group-marginless">
                   <label class="col-lg-1 col-form-label">Transc Date</label>
                   <div class="col-lg-3">
@@ -205,7 +204,6 @@
                       <input type="number" class="form-control" />
                     </div>
                   </div>
-
                   <label class="col-lg-1 col-form-label">Advance</label>
                   <div class="col-lg-2">
                     <div class="kt-input-icon">
@@ -214,7 +212,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="kt-portlet__foot">
                 <div class="kt-form__actions">
                   <div class="row">
