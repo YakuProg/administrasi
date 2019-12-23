@@ -7,12 +7,17 @@ import AddExpenses from '../views/expenses/AddExpenses.vue';
 import ManagementUser from '../views/ManagementUser.vue';
 import Contacts from '../views/contacts/Contacts.vue';
 import AddContacts from '../views/contacts/AddContacts.vue';
-import Form1 from '../views/Form1.vue';
+import Coopra from '../views/sales/Coopra.vue';
+import AddCoopraSale from '../views/sales/AddCoopraSale.vue';
+import AddCoopraContract from '../views/sales/AddCoopraContract.vue';
+import Goods from '../views/sales/Goods.vue';
+import AddGoodsSale from '../views/sales/AddGoodsSale.vue';
 import CashBank from '../views/CashBank.vue';
 import CashBankPayMoney from '../views/CashBankPayMoney.vue';
 import Login from '../views/Login.vue';
 import logout from '../views/Logout.vue';
 import store from '@/store';
+import Form1 from '../views/Form1.vue';
 
 Vue.use(VueRouter);
 
@@ -44,6 +49,31 @@ const routes = [
     path: '/AddContacts',
     name: 'AddContacts',
     component: AddContacts
+  },
+  {
+    path: '/sales-coopra',
+    name: 'sales-coopra',
+    component: Coopra
+  },
+  {
+    path: '/AddCoopraSale',
+    name: 'addcooprasale',
+    component: AddCoopraSale
+  },
+  {
+    path: '/AddCoopraContract',
+    name: 'addcoopracontract',
+    component: AddCoopraContract
+  },
+  {
+    path: '/sales-goods',
+    name: 'sales-goods',
+    component: Goods
+  },
+  {
+    path: '/AddGoodsSale',
+    name: 'addgoodssale',
+    component: AddGoodsSale
   },
   {
     path: '/Expenses',
