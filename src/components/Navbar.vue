@@ -519,25 +519,19 @@
               <span class="kt-menu__arrow"></span>
               <ul class="kt-menu__subnav">
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="/purchases-coopra" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
                     <span class="kt-menu__link-text">Copra</span>
-                    <span class="kt-menu__link-badge">
-                      <span class="kt-badge kt-badge--danger kt-badge--inline">new</span>
-                    </span>
                   </a>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="/purchases-goods" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
                     <span class="kt-menu__link-text">Goods</span>
-                    <span class="kt-menu__link-badge">
-                      <span class="kt-badge kt-badge--danger kt-badge--inline">new</span>
-                    </span>
                   </a>
                 </li>
               </ul>

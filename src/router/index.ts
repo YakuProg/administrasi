@@ -12,6 +12,11 @@ import AddCoopraSale from '../views/sales/AddCoopraSale.vue';
 import AddCoopraContract from '../views/sales/AddCoopraContract.vue';
 import Goods from '../views/sales/Goods.vue';
 import AddGoodsSale from '../views/sales/AddGoodsSale.vue';
+import PurchasesCoopra from '../views/purchases/PurchasesCoopra.vue';
+import AddCoopraPurchases from '../views/purchases/AddCoopraPurchases.vue';
+import AddPurchasesContact from '../views/purchases/AddPurchasesContact.vue';
+import PurchasesGoods from '../views/purchases/PurchasesGoods.vue';
+import AddPurchasesGoods from '../views/purchases/AddPurchasesGoods.vue';
 import CashBank from '../views/CashBank.vue';
 import CashBankPayMoney from '../views/CashBankPayMoney.vue';
 import Login from '../views/Login.vue';
@@ -74,6 +79,31 @@ const routes = [
     path: '/AddGoodsSale',
     name: 'addgoodssale',
     component: AddGoodsSale
+  },
+  {
+    path: '/purchases-coopra',
+    name: 'purchases-coopra',
+    component: PurchasesCoopra
+  },
+  {
+    path: '/AddCoopraPurchases',
+    name: 'addcooprapurchases',
+    component: AddCoopraPurchases
+  },
+  {
+    path: '/AddPurchasesContact',
+    name: 'addPurchasescontact',
+    component: AddPurchasesContact
+  },
+  {
+    path: '/purchases-goods',
+    name: 'purchases-goods',
+    component: PurchasesGoods
+  },
+  {
+    path: '/AddPurchasesGoods',
+    name: 'addpurchasesgoods',
+    component: AddPurchasesGoods
   },
   {
     path: '/Expenses',
