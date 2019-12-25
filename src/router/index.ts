@@ -18,6 +18,7 @@ import Login from '../views/Login.vue';
 import logout from '../views/Logout.vue';
 import store from '@/store';
 import Form1 from '../views/Form1.vue';
+import Assets from '../views/Assets/index.vue';
 
 Vue.use(VueRouter);
 
@@ -116,6 +117,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
+  {
+    path:'/Assets',
+    name:'Assets',
+    component:Assets
+  }
 ];
 
 const router = new VueRouter({
