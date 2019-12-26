@@ -16,9 +16,9 @@ import CashBank from '../views/CashBank.vue';
 import CashBankPayMoney from '../views/CashBankPayMoney.vue';
 import Login from '../views/Login.vue';
 import logout from '../views/Logout.vue';
+import menuAssets from '../views/assets/menuAssets.vue';
 import store from '@/store';
 import Form1 from '../views/Form1.vue';
-import Assets from '../views/Assets/index.vue';
 
 Vue.use(VueRouter);
 
@@ -120,7 +120,7 @@ const routes = [
   {
     path:'/Assets',
     name:'Assets',
-    component:Assets
+    component:menuAssets,
   }
 ];
 
