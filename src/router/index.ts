@@ -21,6 +21,7 @@ import CashBank from '../views/CashBank.vue';
 import CashBankPayMoney from '../views/CashBankPayMoney.vue';
 import Login from '../views/Login.vue';
 import logout from '../views/Logout.vue';
+import menuAssets from '../views/assets/menuAssets.vue';
 import store from '@/store';
 import Form1 from '../views/Form1.vue';
 
@@ -146,6 +147,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
+  {
+    path:'/Assets',
+    name:'Assets',
+    component:menuAssets,
+  }
 ];
 
 const router = new VueRouter({

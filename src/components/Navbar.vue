@@ -613,6 +613,17 @@
           </li>
           <!-- end Cashier Transaction -->
 
+          <!-- Assest -->
+          <li class="kt-menu__item  kt-menu__item" aria-haspopup="true">
+            <a href="/Assets" class="kt-menu__link ">
+              <span class="kt-menu__link-icon">
+                <i class="fa fa-luggage-cart"></i>
+              </span>
+              <span class="kt-menu__link-text">Assest</span>
+            </a>
+          </li>
+          <!-- end Assets -->
+
           <!-- contacts -->
           <li class="kt-menu__item" aria-haspopup="true">
             <router-link class="kt-menu__link" to="/Contacts">
