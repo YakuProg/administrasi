@@ -1,5 +1,5 @@
 <template>
-	<div class="assets" id="assets">
+	<div class="assets" id="menuAssets">
 		<!-- begin:: Subheader -->
 		<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 			<div class="kt-container  kt-container--fluid ">
@@ -10,6 +10,7 @@
 			</div>
 		</div>
 		<!-- end:: Subheader -->
+
 		<!-- content -->
 		<div class="kt-portlet kt-portlet--mobile">
 			<div class="kt-portlet__head kt-portlet__head--lg">
@@ -62,6 +63,7 @@
 			</div>
 		</div>
 		<!-- end content -->
+
 		<!-- modal Add New Assets -->
 		<div class="modal fade" id="addNewAssets" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog  modal-lg" role="document">
@@ -103,44 +105,35 @@
 									<span>Attachments : STNK, BPKB, Nota beli, etc.</span>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-2">
-									<label for="" class=" col-form-label"><b>Set Alert</b></label>
-								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="">Tanggal Service</label>
-										<div class='input-group date' id='datetimepicker1'>
-											<input type='text' class="form-control" />
-											<span class="input-group-addon">
-												<span class="glyphicon glyphicon-calendar"></span>
-											</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="">Ganti Oli</label>
-										<div class='input-group date' id='datetimepicker2'>
-											<input type='text' class="form-control" />
-											<span class="input-group-addon">
-												<span class="glyphicon glyphicon-calendar"></span>
-											</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="">Perpanjang surat Kendaraan</label>
-										<div class='input-group date' id='datetimepicker3'>
-											<input type='text' class="form-control" />
-											<span class="input-group-addon">
-												<span class="glyphicon glyphicon-calendar"></span>
-											</span>
-										</div>
-									</div>
-								</div>
+							<div class="custom-file">
+								<label ><b>Set Alert</b></label>
 							</div>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="">Tanggal Service</label>
+											<date-picker v-model="date1" lang="en" type="date" name="date1" format="YYYY-MM-DD"></date-picker>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="">Ganti Oli</label>
+											<date-picker v-model="date2" lang="en" type="date" name="date2" format="YYYY-MM-DD"></date-picker>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="">Perpanjang surat Kendaraan</label>
+											<date-picker v-model="date3" lang="en" type="date" name="date3" format="YYYY-MM-DD"></date-picker>
+											<!-- <div class='input-group date' id='datetimepicker3'>
+												<input type='text' class="form-control" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div> -->
+										</div>
+									</div>
+								</div>
 						</div>
 						<div class="kt-portlet__foot">
 							<div class="kt-form__actions ">
@@ -153,6 +146,7 @@
 			</div>
 		</div>
 		<!-- end Modal add new assets -->
+
 		<!-- modal service history -->
 		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg" role="document">
@@ -195,15 +189,25 @@
 		<!-- end Modal Service history -->
   	</div>
 </template>
+
 <script type="text/javascript">
-	$(function () {
-		$('#datetimepicker1').datetimepicker();
-		$('#datetimepicker2').datetimepicker();
-		$('#datetimepicker3').datetimepicker();
-	});
-	
+
+import DatePicker from 'vue2-datepicker';
+
+import 'vue2-datepicker/index.css';
+
 // @ is an alias to /src
 export default {
-  name: 'menuAssets'
+  name: 'menuAssets',
+	components:{
+		DatePicker
+	},
+	data(){
+		return{
+			date1: null,
+			date2: null,
+			date3: null
+		}
+	}
 };
 </script>
