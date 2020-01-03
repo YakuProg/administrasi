@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div v-if="true">
+    <div v-if="logIn">
       <div id="kt_header_mobile" class="kt-header-mobile kt-header-mobile--fixed">
         <div class="kt-header-mobile__logo">
           <a href="index.html">
@@ -55,12 +55,12 @@
             >
               <div class="kt-container kt-container--fluid">
                 <div class="kt-footer__copyright">
-                  2019&nbsp;&copy;&nbsp;
+                  2020&nbsp;&copy;&nbsp;
                   <a
                     href="http://keenthemes.com/metronic"
                     target="_blank"
                     class="kt-link"
-                  >Keenthemes</a>
+                  >Administration</a>
                 </div>
                 <div class="kt-footer__menu">
                   <a
@@ -87,7 +87,7 @@
         <!-- end:: Page -->
       </div>
     </div>
-    <div v-if="false">
+    <div v-if="!logIn">
       <Login></Login>
       <!-- begin:: Footer -->
       <div
@@ -96,16 +96,12 @@
       >
         <div class="kt-container kt-container--fluid">
           <div class="kt-footer__copyright">
-            2019&nbsp;&copy;&nbsp;
-<<<<<<< HEAD
+            2020&nbsp;&copy;&nbsp;
             <a
               href="http://keenthemes.com/metronic"
               target="_blank"
               class="kt-link"
-            >Keenthemes</a>
-=======
-            <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Keenthemes</a>
->>>>>>> cd940abec771f047633c93f45ad7af6610eb05d7
+            >Administration</a>
           </div>
           <div class="kt-footer__menu">
             <a
