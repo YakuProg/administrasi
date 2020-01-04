@@ -19,7 +19,7 @@
           </div>
           <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver">
             <div class="kt-grid__item kt-grid__item--middle">
-              <h3 class="kt-login__title">Welcome to Metronic!</h3>
+              <h3 class="kt-login__title">Welcome Aplication Administration!</h3>
               <h4
                 class="kt-login__subtitle"
               >The ultimate Bootstrap & Angular 6 admin theme framework for next generation web apps.</h4>
@@ -27,11 +27,7 @@
           </div>
           <div class="kt-grid__item">
             <div class="kt-login__info">
-<<<<<<< HEAD
-              <div class="kt-login__copyright">&copy 2018 Metronic</div>
-=======
-              <div class="kt-login__copyright">2018 Metronic</div>
->>>>>>> cd940abec771f047633c93f45ad7af6610eb05d7
+              <div class="kt-login__copyright">2020 Administration</div>
               <div class="kt-login__menu">
                 <a href="#" class="kt-link">Privacy</a>
                 <a href="#" class="kt-link">Legal</a>
@@ -112,7 +108,7 @@
               <!--end::Divider-->
 
               <!--begin::Options-->
-              <div class="kt-login__options">
+              <!-- <div class="kt-login__options">
                 <a href="#" class="btn btn-primary kt-btn">
                   <i class="fab fa-facebook-f"></i>
                   Facebook
@@ -127,7 +123,7 @@
                   <i class="fab fa-google"></i>
                   Google
                 </a>
-              </div>
+              </div> -->
               <!--end::Options-->
             </div>
             <!--end::Signin-->
@@ -159,7 +155,7 @@ export default {
           password: this.password
         })
         .then(response => {
-          this.$router.push({ name: "form1" });
+          this.$router.push({ name: "home" });
         });
     }
   }
