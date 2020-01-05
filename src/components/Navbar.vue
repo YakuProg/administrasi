@@ -162,7 +162,7 @@
                   </span>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -207,7 +207,7 @@
                   </div>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -218,7 +218,7 @@
                   </a>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -331,7 +331,7 @@
                   </div>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -342,7 +342,7 @@
                   </a>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -403,7 +403,7 @@
                   </router-link>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <router-link class="kt-menu__link" to="/cashbankreceivemoney">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -411,7 +411,7 @@
                     <span class="kt-menu__link-badge">
                       <span class="kt-badge kt-badge--danger kt-badge--inline">new</span>
                     </span>
-                  </a>
+                  </router-link>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
                   <router-link class="kt-menu__link" to="/cashbankpaymoney">
@@ -464,20 +464,20 @@
               <span class="kt-menu__arrow"></span>
               <ul class="kt-menu__subnav">
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="/sales-coopra" class="kt-menu__link">
+                  <router-link class="kt-menu__link" to="/sales-coopra">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
                     <span class="kt-menu__link-text">Copra</span>
-                  </a>
+                  </router-link>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="/sales-goods" class="kt-menu__link">
+                  <router-link class="kt-menu__link" to="/sales-goods">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
                     <span class="kt-menu__link-text">Goods</span>
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </div>
@@ -519,20 +519,20 @@
               <span class="kt-menu__arrow"></span>
               <ul class="kt-menu__subnav">
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="/purchases-coopra" class="kt-menu__link">
+                  <router-link class="kt-menu__link" to="/purchases-coopra">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
                     <span class="kt-menu__link-text">Copra</span>
-                  </a>
+                  </router-link>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="/purchases-goods" class="kt-menu__link">
+                  <router-link class="kt-menu__link" to="/purchases-goods">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
                     <span class="kt-menu__link-text">Goods</span>
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </div>
@@ -615,12 +615,12 @@
 
           <!-- Assest -->
           <li class="kt-menu__item  kt-menu__item" aria-haspopup="true">
-            <a href="/Assets" class="kt-menu__link ">
+            <router-link class="kt-menu__link" to="/Assets">
               <span class="kt-menu__link-icon">
                 <i class="fa fa-luggage-cart"></i>
               </span>
               <span class="kt-menu__link-text">Assest</span>
-            </a>
+            </router-link>
           </li>
           <!-- end Assets -->
 
@@ -660,6 +660,7 @@
             </router-link>
           </li>
           <!-- end contacts -->
+
           <!-- management user -->
           <li class="kt-menu__item" aria-haspopup="true">
             <router-link class="kt-menu__link" to="/ManagementUser">
@@ -731,7 +732,7 @@
               <span class="kt-menu__arrow"></span>
               <ul class="kt-menu__subnav">
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -742,7 +743,7 @@
                   </a>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -792,7 +793,7 @@
               <span class="kt-menu__arrow"></span>
               <ul class="kt-menu__subnav">
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -803,7 +804,7 @@
                   </a>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -814,7 +815,7 @@
                   </a>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -864,7 +865,7 @@
               <span class="kt-menu__arrow"></span>
               <ul class="kt-menu__subnav">
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -875,7 +876,7 @@
                   </a>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>
@@ -886,7 +887,7 @@
                   </a>
                 </li>
                 <li class="kt-menu__item" aria-haspopup="true">
-                  <a href="custom/apps/inbox.html" class="kt-menu__link">
+                  <a href="javascript:;" class="kt-menu__link">
                     <i class="kt-menu__link-bullet kt-menu__link-bullet--line">
                       <span></span>
                     </i>

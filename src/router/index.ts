@@ -17,8 +17,9 @@ import AddCoopraPurchases from '../views/purchases/AddCoopraPurchases.vue';
 import AddPurchasesContact from '../views/purchases/AddPurchasesContact.vue';
 import PurchasesGoods from '../views/purchases/PurchasesGoods.vue';
 import AddPurchasesGoods from '../views/purchases/AddPurchasesGoods.vue';
-import CashBank from '../views/CashBank.vue';
-import CashBankPayMoney from '../views/CashBankPayMoney.vue';
+import CashBank from '../views/cashBank/CashBankTransferFounds.vue';
+import CashBankPayMoney from '../views/cashBank/CashBankPayMoney.vue';
+import CashBankReceiveMoney from '../views/cashBank/CashBankReceiveMoney.vue';
 import Login from '../views/Login.vue';
 import logout from '../views/Logout.vue';
 import menuAssets from '../views/assets/menuAssets.vue';
@@ -138,6 +139,11 @@ const routes = [
     path: '/cashbankpaymoney',
     name: 'cashbankpaymoney',
     component: CashBankPayMoney,
+  },
+  {
+    path: '/cashbankreceivemoney',
+    name: 'cashbankreceivemoney',
+    component: CashBankReceiveMoney,
   },
   {
     path: '/about',

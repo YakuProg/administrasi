@@ -1,0 +1,60 @@
+{
+  "cashBank": [
+    {
+      "cashBankTransferFounds" : {
+        "id" : 1,
+        "receivebles" : "3000000",
+        "rayables" : "3000000",
+        "balance" : "3000000",
+        "dataUser" : [
+          {
+            "code" : "1-001",
+            "name" : "cash(main)",
+            "balence" : null,
+            "update" : "21-12-2020"
+          },
+          {
+            "code" : "1-002",
+            "name" : "cash(main)",
+            "balence" : null,
+            "update" : "21-12-2020"
+          },
+          {
+            "code" : "1-003",
+            "name" : "cash(main)",
+            "balence" : null,
+            "update" : "21-12-2020"
+          }
+        ]
+      },
+      "cashBankReceiveMoney" : {
+        "id" : 1,
+        "depositTo" : [
+          {
+            "user" : "user1"
+          },
+          {
+            "user" : "user2"
+          },
+          {
+            "user" : "user3"
+          }
+        ]
+      },
+      "cashBankPayMoney" : {
+        "id" : 1,
+        "payFrom" : [
+          {
+            "user" : "user1"
+          },
+          {
+            "user" : "user2"
+          },
+          {
+            "user" : "user3"
+          }
+        ]
+      }
+    }
+  ]
+}

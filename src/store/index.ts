@@ -8,19 +8,26 @@ export default new Vuex.Store({
   state: {
     token: localStorage.getItem('access_token') || null,
     filter: 'all',
-    todos: []
+    todos: [],
+    listReportCashBank: []
   },
   getters: {
     logIn(state){
       return state.token !== null
+    },
+    listReportCashBank(state) {
+      return state.listReportCashBank;
     }
   },
   mutations: {
-    retrieveToken(state, token){
-      state.token = token
+    retrieveToken(state, payload){
+      state.token = payload
     },
     destroyToken(state){
       state.token = null
+    },
+    updateListReportCashBank(state, payload){
+      state.listReportCashBank = payload
     }
   },
   actions: {
@@ -28,11 +35,11 @@ export default new Vuex.Store({
       localStorage.removeItem('access_token')
       contex.commit('destroyToken')
     },
-    retrieveToken(contex, credentials) {
+    retrieveToken(contex, payload) {
       return new Promise((resolve, reject) => {
         axios.post('https://apiadministrasi.herokuapp.com/login', {
-          username: credentials.username,
-          password: credentials.password
+          username: payload.username,
+          password: payload.password
         })
         .then(response => {
           const token = response.data.token
@@ -43,6 +50,14 @@ export default new Vuex.Store({
         .catch(error => {
           reject(error)
         })
+      })
+    },
+    getListReportCashBank(contex){
+      axios.get('http://localhost:3000/cashBank')
+      .then((response) => {
+        const result = response.data[0].cashBankTransferFounds;
+        console.log("fandu", response, result);
+        contex.commit('updateListReportCashBank', result)
       })
     }
   },
