@@ -252,35 +252,38 @@
                               Write anything, about your description or notes for users                             
                             </span>
 
-                            <div class="kt-widget__content">
-                              <div class="kt-widget__details">
-                                <span class="kt-widget__subtitle">Account Code</span>
-                                <span class="kt-widget__value">1 - 001</span>
-                                <span class="kt-widget__value">1 - 002</span>
-                                <span class="kt-widget__value">1 - 003</span>
-                              </div>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Account Code</th>
+                                  <th scope="col">Acc Name</th>
+                                  <th scope="col">Balance</th>
+                                  <th scope="col">Last Update</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <template v-if="!listReportCashBank.dataUser.length">
+                                  <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                  </tr>
+                                </template>
 
-                              <div class="kt-widget__details">
-                                <span class="kt-widget__subtitle">Acc Name</span>
-                                <span class="kt-widget__value">Cash (Main)</span>
-                                <span class="kt-widget__value">Cash (Cashier)</span>
-                                <span class="kt-widget__value">BRI 567</span>
-                              </div>
-
-                              <div class="kt-widget__details">
-                                <span class="kt-widget__subtitle">Balance</span>
-                                <span class="kt-widget__value"> - </span>
-                                <span class="kt-widget__value"> - </span>
-                                <span class="kt-widget__value"> - </span>
-                              </div>
-
-                              <div class="kt-widget__details">
-                                <span class="kt-widget__subtitle">Last Update</span>
-                                <span class="kt-widget__value">21/12/2019</span>
-                                <span class="kt-widget__value">22/12/2019</span>
-                                <span class="kt-widget__value">23/12/2019</span>
-                              </div>
-                            </div>
+                                <template v-else>
+                                  <tr v-for="dataReport in listReportCashBank.dataUser" :key="dataReport.code">
+                                    <th scope="row">1</th>
+                                    <td>{{dataReport.code}}</td>
+                                    <td>{{dataReport.name}}</td>
+                                    <td>{{dataReport.balence}}</td>
+                                    <td>{{dataReport.update}}</td>
+                                  </tr>
+                                </template>
+                              </tbody>
+                            </table>
                           </div>
 
                           <div class="kt-widget__footer">
@@ -410,6 +413,14 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: 'cashbank'
+  name: 'cashBank',
+  mounted() {
+    return this.$store.dispatch('getListReportCashBank');
+  },
+  computed: {
+    listReportCashBank(){
+      return this.$store.getters.listReportCashBank;
+    }
+  }
 };
 </script>

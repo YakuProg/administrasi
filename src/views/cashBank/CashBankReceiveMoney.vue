@@ -5,7 +5,7 @@
       <div class="kt-container  kt-container--fluid ">
         <div class="kt-subheader__main">
           <h3 class="kt-subheader__title">
-            Pay Money                           
+            Receive Money                           
           </h3>
           <span class="kt-subheader__separator kt-subheader__separator--v"></span>
           <div class="kt-subheader__group" id="kt_subheader_search">
@@ -165,7 +165,7 @@
                   <div class="kt-section__content">
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Pay From :</label>
+                        <label class="form-control-label">Deposit To :</label>
                         <select class="form-control" name="billing_card_exp_month">
                           <option value="">Select</option>
                         </select>
@@ -193,7 +193,7 @@
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Payment For Account :</label>
+                        <label class="form-control-label">Receive From :</label>
                         <select class="form-control" name="billing_card_exp_month">
                           <option value="">Select</option>
                         </select>
@@ -203,30 +203,6 @@
                         <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
                       </div>
                       <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Amount :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
-                      </div>
-                    </div>
-                    <div class="form-group form-group-last row">
-                      <div class="col-lg-3 form-group-sub">
-                        <label class="form-control-label">Payment For Account :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
-                        </select>
-                      </div>
-                      <div class="col-lg-3 form-group-sub">
-                        <label class="form-control-label">Description :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
-                      </div>
-                      <div class="col-lg-2 form-group-sub">
-                        <label class="form-control-label">Total :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
-                      </div>
-                      <div class="col-lg-2 form-group-sub">
-                        <label class="form-control-label">Balence Due :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
-                      </div>
-                      <div class="col-lg-2 form-group-sub">
                         <label class="form-control-label">Amount :</label>
                         <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
                       </div>
@@ -243,17 +219,7 @@
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Sub Total :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
-                        </select>
-                      </div>
-                      <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Total Paid :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
-                      </div>
-                      <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Total (Remain) :</label>
+                        <label class="form-control-label">Total :</label>
                         <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
                       </div>
                     </div>
@@ -285,6 +251,6 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: 'cashbankpaymoney'
+  name: 'cashBankReceiveMoney'
 };
 </script>
