@@ -81,10 +81,10 @@
 								<label><b>Name / Code</b></label>
 								<div class="row">
 									<div class="col-md-6">
-										<input type="text" class="form-control"  placeholder="Name">
+										<input type="text" class="form-control"  placeholder="Code">
 									</div>
 									<div class="col-md-6">
-										<input type="text" class="form-control"  placeholder="Code">
+										<input type="text" class="form-control"  placeholder="Name">
 									</div>
 								</div>
 							</div>
@@ -92,10 +92,39 @@
 								<label for="descriptions"><b>Descriptions</b></label>
 								<div class="row">
 									<div class="col-md-12">
-										<textarea name="descriptions" class="form-control" rows="6" id="descriptions"></textarea>
+										<textarea name="descriptions" class="form-control" rows="3" id="descriptions"></textarea>
 									</div>
 								</div>
 							</div>
+
+
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for=""><b>Tanggal Beli</b></label>
+											<date-picker v-model="date1" lang="en" type="date" name="date1" format="YYYY-MM-DD"></date-picker>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for=""><b>Jumlah</b></label>
+											<input type="text" class="form-control"  placeholder="satuan : unit/buah/blok">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for=""><b>Expire Date</b></label>
+											<date-picker v-model="date3" lang="en" type="date" name="date3" format="YYYY-MM-DD"></date-picker>
+											<!-- <div class='input-group date' id='datetimepicker3'>
+												<input type='text' class="form-control" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div> -->
+										</div>
+									</div>
+								</div>
+
 							<div class="form-group">
 								<label ><b>Assets Picture</b></label>
 								<div></div>
