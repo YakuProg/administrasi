@@ -159,6 +159,29 @@
         src="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/js/pages/crud/datatables/basic/basic.js"
         type="text/javascript"></script>
     <!--end::Page Scripts -->
+
+    <!-- Temporary Setting Printer -->
+    <script src="https://cdn.jsdelivr.net/npm/recta/dist/recta.js"></script>
+    <script type="text/javascript">
+      var printer = new Recta('7109862958', '1811')
+    
+      function onClick () {
+        alert('fandu masuk');
+        printer.open().then(function () {
+          printer.align('center')
+            .text('Hello World !!')
+            .bold(true)
+            .text('This is bold text')
+            .bold(false)
+            .underline(true)
+            .text('This is underline text')
+            .underline(false)
+            .barcode('UPC-A', '123456789012')
+            .cut()
+            .print()
+        })
+      }
+    </script>
 </body>
 <!-- end::Body -->
 
