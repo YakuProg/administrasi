@@ -48,11 +48,11 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr v-for="n in 4">
+						<tr v-for="assets in listAssets">
 							<td></td>
-							<td>{{ n }}</td>
-							<td>61715-075</td>
-							<td  class="text-center"><img src="https://lalityanindya.files.wordpress.com/2017/11/purchase-guy.png" alt=""  width="100" height="100"  class="img-thumbnail"></td>
+							<td>{{ assets.code }}</td>
+							<td>{{ assets.name }}</td>
+							<td  class="text-center"><img v-bind:src=" assets.image" /></td>
 							<td nowrap  class="text-center">
 								<button class="btn btn-success btn-round btn-sm"  data-toggle="modal" data-target="#exampleModal">Details</button>
 							</td>
@@ -198,8 +198,8 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr v-for="assets in 6">
-									<th scope="row">{{assets}}</th>
+								<tr v-for="detailAssets in 6">
+									<th scope="row">{{detailAssets}}</th>
 									<td>12/03/2018</td>
 									<td>Otto</td>
 									<td>maintenance</td>
@@ -228,6 +228,14 @@ import 'vue2-datepicker/index.css';
 // @ is an alias to /src
 export default {
   name: 'menuAssets',
+  mounted() {
+    return this.$store.dispatch('getListAssets');
+  },
+  computed: {
+    listAssets(){
+      return this.$store.getters.listAssets;
+    }
+  },
 	components:{
 		DatePicker
 	},

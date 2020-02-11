@@ -9,7 +9,8 @@ export default new Vuex.Store({
     token: localStorage.getItem('access_token') || null,
     filter: 'all',
     todos: [],
-    listReportCashBank: []
+    listReportCashBank: [],
+    listAssets:[]
   },
   getters: {
     logIn(state){
@@ -17,6 +18,9 @@ export default new Vuex.Store({
     },
     listReportCashBank(state) {
       return state.listReportCashBank;
+    },
+    listAssets(state) {
+      return state.listAssets;
     }
   },
   mutations: {
@@ -28,6 +32,9 @@ export default new Vuex.Store({
     },
     updateListReportCashBank(state, payload){
       state.listReportCashBank = payload
+    },
+    updatelistAssets(state, payload){
+      state.listAssets = payload
     }
   },
   actions: {
@@ -56,8 +63,14 @@ export default new Vuex.Store({
       axios.get('http://localhost:3000/cashBank')
       .then((response) => {
         const result = response.data[0].cashBankTransferFounds;
-        console.log("fandu", response, result);
         contex.commit('updateListReportCashBank', result)
+      })
+    },
+    getListAssets(contex){
+      axios.get('http://localhost:3000/assets')
+      .then((response) => {
+        const result = response.data[0].listAssets;
+        contex.commit('updatelistAssets', result)
       })
     }
   },
