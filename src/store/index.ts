@@ -63,7 +63,6 @@ export default new Vuex.Store({
       axios.get('http://localhost:3000/cashBank')
       .then((response) => {
         const result = response.data[0].cashBankTransferFounds;
-        console.log("fandu", response, result);
         contex.commit('updateListReportCashBank', result)
       })
     },
@@ -71,7 +70,6 @@ export default new Vuex.Store({
       axios.get('http://localhost:3000/assets')
       .then((response) => {
         const result = response.data[0].listAssets;
-        console.log("fandu 1",response,result)
         contex.commit('updatelistAssets', result)
       })
     }
