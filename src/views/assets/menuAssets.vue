@@ -1,3 +1,4 @@
+<style>.datepicker{z-index:1151;}</style>
 <template>
 	<div class="assets" id="menuAssets">
 		<!-- begin:: Subheader -->
@@ -44,7 +45,7 @@
 							<th>Code</th>
 							<th>Name</th>
 							<th>Image</th>
-							<th>Actions</th>
+							<!-- <th>Actions</th> -->
 						</tr>
 					</thead>
 					<tbody>
@@ -53,9 +54,9 @@
 							<td>{{ assets.code }}</td>
 							<td>{{ assets.name }}</td>
 							<td  class="text-center"><img v-bind:src=" assets.image" /></td>
-							<td nowrap  class="text-center">
+							<!-- <td nowrap  class="text-center">
 								<button class="btn btn-success btn-round btn-sm"  data-toggle="modal" data-target="#exampleModal">Details</button>
-							</td>
+							</td> -->
 						</tr>
 					</tbody>
 				</table>
@@ -75,16 +76,16 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="/Assets" class="kt-form" method="post">
+					<form class="kt-form" @submit="formSubmit">
 						<div class="kt-portlet__body">
 							<div class="form-group">
 								<label><b>Name / Code</b></label>
 								<div class="row">
 									<div class="col-md-6">
-										<input type="text" class="form-control"  placeholder="Code">
+										<input type="text" class="form-control" v-model="code"  placeholder="Code">
 									</div>
 									<div class="col-md-6">
-										<input type="text" class="form-control"  placeholder="Name">
+										<input type="text" class="form-control" v-model="name"  placeholder="Name">
 									</div>
 								</div>
 							</div>
@@ -92,7 +93,7 @@
 								<label for="descriptions"><b>Descriptions</b></label>
 								<div class="row">
 									<div class="col-md-12">
-										<textarea name="descriptions" class="form-control" rows="3" id="descriptions"></textarea>
+										<textarea v-model="descriptions" class="form-control" rows="3"></textarea>
 									</div>
 								</div>
 							</div>
@@ -102,25 +103,19 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label for=""><b>Tanggal Beli</b></label>
-											<date-picker v-model="date1" lang="en" type="date" name="date1" format="YYYY-MM-DD"></date-picker>
+											<date-picker lang="en" type="date" v-model="tglBeli" format="YYYY-MM-DD"></date-picker>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
 											<label for=""><b>Jumlah</b></label>
-											<input type="text" class="form-control"  placeholder="satuan : unit/buah/blok">
+											<input type="text" class="form-control" v-model="jumlah"  placeholder="satuan : unit/buah/blok">
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
 											<label for=""><b>Expire Date</b></label>
-											<date-picker v-model="date3" lang="en" type="date" name="date3" format="YYYY-MM-DD"></date-picker>
-											<!-- <div class='input-group date' id='datetimepicker3'>
-												<input type='text' class="form-control" />
-												<span class="input-group-addon">
-													<span class="glyphicon glyphicon-calendar"></span>
-												</span>
-											</div> -->
+											<date-picker lang="en" type="date" v-model="expDate" format="YYYY-MM-DD"></date-picker>
 										</div>
 									</div>
 								</div>
@@ -129,44 +124,15 @@
 								<label ><b>Assets Picture</b></label>
 								<div></div>
 								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="customFile">
+									<input type="file" class="custom-file-input" name="img" id="img">
 									<label class="custom-file-label" for="customFile">Choose file</label>
 									<span>Attachments : STNK, BPKB, Nota beli, etc.</span>
 								</div>
 							</div>
-							<div class="custom-file">
-								<label ><b>Set Alert</b></label>
-							</div>
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="">Tanggal Service</label>
-											<date-picker v-model="date1" lang="en" type="date" name="date1" format="YYYY-MM-DD"></date-picker>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="">Ganti Oli</label>
-											<date-picker v-model="date2" lang="en" type="date" name="date2" format="YYYY-MM-DD"></date-picker>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<label for="">Perpanjang surat Kendaraan</label>
-											<date-picker v-model="date3" lang="en" type="date" name="date3" format="YYYY-MM-DD"></date-picker>
-											<!-- <div class='input-group date' id='datetimepicker3'>
-												<input type='text' class="form-control" />
-												<span class="input-group-addon">
-													<span class="glyphicon glyphicon-calendar"></span>
-												</span>
-											</div> -->
-										</div>
-									</div>
-								</div>
 						</div>
 						<div class="kt-portlet__foot">
 							<div class="kt-form__actions ">
-								<button type="submit" class="btn btn-success ">Creat Assets</button>
+								<button v-on:click="submit" type="formSubmit" class="btn btn-success ">Creat Assets</button>
 							</div>
 						</div>
 					</form>
@@ -241,10 +207,39 @@ export default {
 	},
 	data(){
 		return{
-			date1: null,
-			date2: null,
-			date3: null
+			file: ''
 		}
+	},
+	methods: {
+		handleFileUpload(){ 
+			this.file = this.$refs.file.files[0]; 
+		},
+		formSubmit(e) {
+			e.preventDefault();
+			let currentObj = this;
+			let input ={
+				'code'	: this.code ,
+				'name'	: this.name ,
+				'descriptions'	: this.descriptions ,
+				'tglBeli'	: this.tglBeli ,
+				'jumlah'	: this.jumlah ,
+				'expDate'	: this.expDate ,
+				'img'	: this.img
+			}
+			console.log(input);
+			/*
+			this.axios.post('http://localhost:8000/yourPostApi', {
+					name: this.name,
+					description: this.description
+			})
+			.then(function (response) {
+					currentObj.output = response.data;
+			})
+			.catch(function (error) {
+					currentObj.output = error;
+			});
+			*/
+		},
 	}
 };
 </script>
