@@ -10,7 +10,8 @@ export default new Vuex.Store({
     filter: 'all',
     todos: [],
     listReportCashBank: [],
-    listAssets:[]
+    listAssets:[],
+    Contacts:[]
   },
   getters: {
     logIn(state){
@@ -21,6 +22,9 @@ export default new Vuex.Store({
     },
     listAssets(state) {
       return state.listAssets;
+    },
+    Contacts(state) {
+      return state.Contacts;
     }
   },
   mutations: {
@@ -35,6 +39,9 @@ export default new Vuex.Store({
     },
     updatelistAssets(state, payload){
       state.listAssets = payload
+    },
+    updatelistContacts(state, payload){
+      state.Contacts = payload
     }
   },
   actions: {
@@ -72,7 +79,42 @@ export default new Vuex.Store({
         const result = response.data[0].listAssets;
         contex.commit('updatelistAssets', result)
       })
-    }
+    },
+    getListContacts(contex){
+      axios.get('http://localhost:3000/contacts')
+      .then((response) => {
+        const result = response.data;
+        contex.commit('updatelistContacts', result)
+      })
+    },
+    getListContactCostumers(contex){
+      axios.get('http://localhost:3000/contacts')
+      .then((response) => {
+        const result = response.data.filter(user => user.type=='Costumer');
+        contex.commit('updatelistContacts', result)
+      })
+    },
+    getListContactVendor(contex){
+      axios.get('http://localhost:3000/contacts')
+      .then((response) => {
+        const result = response.data.filter(user => user.type=='Vendor');
+        contex.commit('updatelistContacts', result)
+      })
+    },
+    getListContactEmployee(contex){
+      axios.get('http://localhost:3000/contacts')
+      .then((response) => {
+        const result = response.data.filter(user => user.type=='Employee');
+        contex.commit('updatelistContacts', result)
+      })
+    },
+    getListContactOthers(contex){
+      axios.get('http://localhost:3000/contacts')
+      .then((response) => {
+        const result = response.data.filter(user => user.type=='Others');
+        contex.commit('updatelistContacts', result)
+      })
+    },
   },
   modules: {
   },
