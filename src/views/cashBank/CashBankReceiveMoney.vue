@@ -151,12 +151,12 @@
             <div class="kt-portlet__head">
               <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                  Pay Money
+                  Receive Money
                 </h3>
               </div>
             </div>
             <!--begin::Form-->
-            <form class="kt-form kt-form--label-right" id="kt_form_2">
+            <form class="kt-form kt-form--label-right" id="app" @submit="submitDataReceiveMoney" method="post">
               <div class="kt-portlet__body">
                 <div class="kt-section">
                   <h3 class="kt-section__title">
@@ -166,8 +166,8 @@
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Deposit To :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="dataReceiveMoney.depositTo.id" @change="setDataDepositTo($event.target.selectedIndex)" class="form-control" name="billing_card_exp_month">
+                          <option v-for="i in dataReceiveMoney.depositTo" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
@@ -177,9 +177,9 @@
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Pay :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <label class="form-control-label">Payer :</label>
+                        <select v-model="dataReceiveMoney.payer.id" @change="setDataPayer($event.target.selectedIndex)" class="form-control" name="billing_card_exp_month">
+                          <option v-for="i in dataReceiveMoney.payer" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
@@ -194,8 +194,8 @@
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Receive From :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="dataReceiveMoney.receiveFrom.id" @change="setDataReceiveFrom($event.target.selectedIndex)" class="form-control" name="billing_card_exp_month">
+                          <option v-for="i in dataReceiveMoney.receiveFrom" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
@@ -249,8 +249,33 @@
 </template>
 
 <script>
+// import {mapState, mapGetters, mapActions} from 'vuex'
 // @ is an alias to /src
 export default {
-  name: 'cashBankReceiveMoney'
+  el: '#app',
+  name: 'cashBankReceiveMoney',
+  mounted() {
+    return this.$store.dispatch('getDataReceiveMoney');
+  },
+  computed: {
+    dataReceiveMoney(){
+      return this.$store.getters.dataReceiveMoney;
+    }
+  },
+  methods: {
+    setDataDepositTo: function(selectedIndex) {
+      console.log("fandu value", this.$store.getters.dataReceiveMoney.depositTo[selectedIndex])
+    },
+    setDataPayer: function(selectedIndex) {
+      console.log("fandu value", this.$store.getters.dataReceiveMoney.payer[selectedIndex])
+    },
+    setDataReceiveFrom: function(selectedIndex) {
+      console.log("fandu value", this.$store.getters.dataReceiveMoney.receiveFrom[selectedIndex])
+    },
+    // checkForm: function (e) {
+    //   e.preventDefault();
+    //   console.log("fandu submit", e);
+    // }
+  }
 };
 </script>

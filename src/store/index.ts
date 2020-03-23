@@ -10,6 +10,7 @@ export default new Vuex.Store({
     filter: 'all',
     todos: [],
     listReportCashBank: [],
+    dataReceiveMoney: [],
     listAssets:[]
   },
   getters: {
@@ -18,6 +19,9 @@ export default new Vuex.Store({
     },
     listReportCashBank(state) {
       return state.listReportCashBank;
+    },
+    dataReceiveMoney(state) {
+      return state.dataReceiveMoney;
     },
     listAssets(state) {
       return state.listAssets;
@@ -32,6 +36,9 @@ export default new Vuex.Store({
     },
     updateListReportCashBank(state, payload){
       state.listReportCashBank = payload
+    },
+    updateDataReceiveMoney(state, payload){
+      state.dataReceiveMoney = payload
     },
     updatelistAssets(state, payload){
       state.listAssets = payload
@@ -65,6 +72,21 @@ export default new Vuex.Store({
         const result = response.data[0].cashBankTransferFounds;
         contex.commit('updateListReportCashBank', result)
       })
+    },
+    getDataReceiveMoney(contex){
+      axios.get('http://localhost:3000/cashBank')
+      .then((response) => {
+        const result = response.data[0].cashBankReceiveMoney;
+        contex.commit('updateDataReceiveMoney', result)
+      })
+    },
+    submitDataReceiveMoney: function () {
+      console.log("fandu submit dulu")
+      // axios
+      //   .post('http://localhost:8081/product', {
+      //     name: '' + this.data.name,
+      //     description: '' + this.data.description
+      //   })
     },
     getListAssets(contex){
       axios.get('http://localhost:3000/assets')
