@@ -87,34 +87,44 @@ export default new Vuex.Store({
         contex.commit('updatelistContacts', result)
       })
     },
+    
     getListContactCostumers(contex){
       axios.get('http://localhost:3000/contacts')
       .then((response) => {
-        const result = response.data.filter(user => user.type=='Costumer');
+        const result = response.data.filter((user = { type: Object}) => {
+          return user.categories == 'Costumer';
+        });
         contex.commit('updatelistContacts', result)
       })
     },
     getListContactVendor(contex){
       axios.get('http://localhost:3000/contacts')
       .then((response) => {
-        const result = response.data.filter(user => user.type=='Vendor');
+        const result = response.data.filter((user = { type: Object}) => {
+          return user.categories == 'Vendor';
+        });
         contex.commit('updatelistContacts', result)
       })
     },
     getListContactEmployee(contex){
       axios.get('http://localhost:3000/contacts')
       .then((response) => {
-        const result = response.data.filter(user => user.type=='Employee');
+        const result = response.data.filter((user = { type: Object}) => {
+          return user.categories == 'Employee';
+        });
         contex.commit('updatelistContacts', result)
       })
     },
     getListContactOthers(contex){
       axios.get('http://localhost:3000/contacts')
       .then((response) => {
-        const result = response.data.filter(user => user.type=='Others');
+        const result = response.data.filter((user = { type: Object}) => {
+          return user.categories == 'Others';
+        });
         contex.commit('updatelistContacts', result)
       })
     },
+    
   },
   modules: {
   },

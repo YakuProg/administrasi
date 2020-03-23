@@ -106,7 +106,7 @@
                             <td>{{user.email}}</td>
                             <td>{{user.gender}}</td>
                             <td>{{user.id}}</td>
-                            <td>{{user.type}}</td>
+                            <td>{{user.categories}}</td>
                           </tr>
                         </tbody>
                       </table>
