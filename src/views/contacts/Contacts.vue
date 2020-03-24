@@ -65,11 +65,11 @@
         <div class="kt-portlet__body">
           <div class="row">
             <div class="col-md-12">
-              <button v-on:click="requestApi('getListContactCostumers')" type="button" class="btn btn-primary btn-wide">Customer</button>&nbsp;
-              <button v-on:click="requestApi('getListContactVendor')" type="button" class="btn btn-primary btn-wide">Vendor</button>&nbsp;
-              <button v-on:click="requestApi('getListContactEmployee')" type="button" class="btn btn-primary btn-wide">Employee</button>&nbsp;
-              <button v-on:click="requestApi('getListContactOthers')" type="button" class="btn btn-primary btn-wide">Others</button>&nbsp;
-              <button v-on:click="requestApi('getListContacts')" type="button" class="btn btn-primary btn-wide">All Types</button>&nbsp;
+              <button v-on:click="filter('Costumer')" type="button" class="btn btn-primary btn-wide">Customer</button>&nbsp;
+              <button v-on:click="filter('Vendor')" type="button" class="btn btn-primary btn-wide">Vendor</button>&nbsp;
+              <button v-on:click="filter('Employee')" type="button" class="btn btn-primary btn-wide">Employee</button>&nbsp;
+              <button v-on:click="filter('Others')" type="button" class="btn btn-primary btn-wide">Others</button>&nbsp;
+              <button v-on:click="filter('')" type="button" class="btn btn-primary btn-wide">All Types</button>&nbsp;
               <br />
             </div>
           </div>
@@ -99,7 +99,7 @@
                             <th>Type</th>
                           </tr>
                         </thead>
-                        <tbody v-for="user in Contacts ">
+                        <tbody v-for="user in filteredContacts ">
                           <tr>
                             <td>{{user.id}}</td>
                             <td>{{user.first_name}} {{user.last_name}}</td>
@@ -134,30 +134,36 @@ export default {
   methods:{
     
     filter:function(fil=''){
-      console.log(this.filteredContacts);
       // console.log(this.filteredContacts);
       if (!fil) {
-        this.filteredContacts = this.Contacts
+        this.filteredContacts = this.contacts
       } else {
-        this.filteredContacts = this.Contacts.filter(user => user.type==fil)
+        this.filteredContacts = this.contacts.filter(user => user.type==fil)
       }
-    },
-    requestApi:function(params){
-      return this.$store.dispatch(params)
     }
   },
   computed: {
-    Contacts(){
-      return this.$store.getters.Contacts;
+    contacts : {
+      get : function(){
+        return this.$store.getters.Contacts;
+      },
+      set : function(){
+        
+      }
     },
     
+  },
+  watch : {
+    contacts(){
+      this.filter()
+    }
   },
 	components:{
     
 	},
 	data(){
 		return{
-      filteredContacts : [],
+      filteredContacts : []
 		}
 	}
 };
