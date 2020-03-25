@@ -1,12 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
-import cashAndBank from './cashAndBank';
+
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  ...cashAndBank,
   state: {
     token: localStorage.getItem('access_token') || null,
     filter: 'all',
