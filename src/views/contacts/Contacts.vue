@@ -131,10 +131,8 @@ export default {
   mounted() {
     return this.$store.dispatch('getListContacts');
   },
-  methods:{
-    
+  methods:{    
     filter:function(fil=''){
-      // console.log(this.filteredContacts);
       if (!fil) {
         this.filteredContacts = this.contacts
       } else {
