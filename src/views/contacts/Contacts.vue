@@ -127,12 +127,12 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: "Contacts",
+  name: "contacts",
   data() {
-		return {
-      filteredContacts : []
-		}
-	},
+    return {
+      filteredContacts: []
+    }
+  },
   mounted() {
     return this.$store.dispatch('getListContacts');
   },
