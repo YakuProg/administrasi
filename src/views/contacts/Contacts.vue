@@ -128,6 +128,11 @@
 // @ is an alias to /src
 export default {
   name: "Contacts",
+  data(){
+		return{
+      filteredContacts : []
+		}
+	},
   mounted() {
     return this.$store.dispatch('getListContacts');
   },
@@ -159,10 +164,5 @@ export default {
 	components:{
     
 	},
-	data(){
-		return{
-      filteredContacts : []
-		}
-	}
 };
 </script>
