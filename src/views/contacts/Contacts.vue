@@ -162,6 +162,6 @@ export default {
   },
   components: {
     // not use
-    }
+  }
 };
 </script>
