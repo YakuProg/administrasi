@@ -128,17 +128,17 @@
 // @ is an alias to /src
 export default {
   name: "Contacts",
-  data(){
-		return{
+  data() {
+		return {
       filteredContacts : []
 		}
 	},
   mounted() {
     return this.$store.dispatch('getListContacts');
   },
-  methods:{    
-    filter:function(fil=''){
-      if (!fil) {
+  methods: {
+    filter: function(fil='') {
+      if(!fil) {
         this.filteredContacts = this.contacts
       } else {
         this.filteredContacts = this.contacts.filter(user => user.type==fil)
@@ -146,23 +146,22 @@ export default {
     }
   },
   computed: {
-    contacts : {
-      get : function(){
+    contacts: {
+      get: function() {
         return this.$store.getters.Contacts;
       },
-      set : function(){
-        
+      set: function() {
+        // not use
       }
     },
-    
   },
-  watch : {
+  watch: {
     contacts(){
       this.filter()
     }
   },
-	components:{
-    
-	},
+  components: {
+    // not use
+    }
 };
 </script>
