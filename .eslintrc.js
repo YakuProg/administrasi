@@ -8,7 +8,13 @@ module.exports = {
         }
     ],
     "extends": ["plugin:vue/base"],
-    // "parserOptions": {
-    //     "parser": "babel-eslint"
-    // }
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "ecmaVersion": 2017,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
+    }
 }

@@ -249,59 +249,57 @@
 </template>
 
 <script>
-export default {
-  el: '#app',
-  name: 'cashBankReceiveMoney',
-  name: "login",
-  data() {
-    return {
-      total: "",
-      dataDeposit: "",
-      dataReceive: "",
-      dataPayer: "",
-      totalAmount: "",
-      transactionDate: "",
-      transactionNo: "",
-      description: "",
-      amount: "",
-      memo: "",
-      attechment: "",
-    };
-  },
-  mounted() {
-    return this.$store.dispatch('getDataReceiveMoney');
-  },
-  computed: {
-    dataReceiveMoney(){
+import { Vue, Component } from 'vue-property-decorator';
+import cashBank from '@/store/modules/cashbank'
+
+@Component
+export default class ReceiveMoney extends Vue {
+  total = ''
+  dataDeposit = ''
+  dataReceive = ''
+  dataPayer = ''
+  totalAmount = ''
+  transactionDate = ''
+  transactionNo = ''
+  description = ''
+  amount = ''
+  memo = ''
+  attechment = ''
+
+  mounted () {
+    this.$store.dispatch('getDataReceiveMoney');
+  }
+
+  get dataReceiveMoney(){
       return this.$store.getters.dataReceiveMoney;
     }
-  },
-  methods: {
-    setDataDepositTo: function(selectedIndex) {
-      console.log("fandu value", this.$store.getters.dataReceiveMoney.depositTo[selectedIndex])
-    },
-    setDataPayer: function(selectedIndex) {
-      console.log("fandu value", this.$store.getters.dataReceiveMoney.payer[selectedIndex])
-    },
-    setDataReceiveFrom: function(selectedIndex) {
-      console.log("fandu value", this.$store.getters.dataReceiveMoney.receiveFrom[selectedIndex])
-    },
-    submitDataReceiveMoney() {
-      this.$store
-        .dispatch("submitDataReceiveMoney", {
-          total: this.total,
-          dataDeposit: this.dataDeposit,
-          dataReceive: this.dataReceive,
-          dataPayer: this.dataPayer,
-          totalAmount: this.totalAmount,
-          transactionDate: this.transactionDate,
-          transactionNo: this.transactionNo,
-          description: this.description,
-          amount: this.amount,
-          memo: this.memo,
-          attechment: this.attechment
-        })
-    }
+
+  setDataDepositTo(selectedIndex) {
+    console.log("fandu value", this.$store.getters.dataReceiveMoney.depositTo[selectedIndex])
   }
-};
+
+  setDataPayer(selectedIndex) {
+    console.log("fandu value", this.$store.getters.dataReceiveMoney.payer[selectedIndex])
+  }
+
+  setDataReceiveFrom(selectedIndex) {
+    console.log("fandu value", this.$store.getters.dataReceiveMoney.receiveFrom[selectedIndex])
+  }
+
+  submitDataReceiveMoney(){
+    cashBank.dataReceiveMoney({
+      total: this.total,
+      data_deposit: this.dataDeposit,
+      data_receive: this.dataReceive,
+      data_payer: this.dataPayer,
+      total_amount: this.totalAmount,
+      transaction_date: this.transactionDate,
+      transaction_no: this.transactionNo,
+      description: this.description,
+      amount: this.amount,
+      memo: this.memo,
+      attechment: this.attechment
+    })
+  }
+}
 </script>
