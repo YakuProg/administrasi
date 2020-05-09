@@ -151,12 +151,12 @@
             <div class="kt-portlet__head">
               <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                  Pay Money
+                  Receive Money
                 </h3>
               </div>
             </div>
             <!--begin::Form-->
-            <form class="kt-form kt-form--label-right" id="kt_form_2">
+            <form class="kt-form kt-form--label-right" id="app" @submit.prevent="submitDataReceiveMoney" method="post">
               <div class="kt-portlet__body">
                 <div class="kt-section">
                   <h3 class="kt-section__title">
@@ -166,61 +166,61 @@
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Deposit To :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="dataDeposit" @change="setDataDepositTo($event.target.selectedIndex)" class="form-control">
+                          <option v-for="i in dataReceiveMoney.depositTo" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Total Amount:</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="totalAmount" type="text" name="totalAmount" class="form-control">
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Pay :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <label class="form-control-label">Payer :</label>
+                        <select v-model="dataPayer" @change="setDataPayer($event.target.selectedIndex)" class="form-control" >
+                          <option v-for="i in dataReceiveMoney.payer" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Transaction Date :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="transactionDate" type="text" class="form-control" >
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Transaction No :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                        <input v-model="transactionNo" type="number" class="form-control" >
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Receive From :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="dataReceive" @change="setDataReceiveFrom($event.target.selectedIndex)" class="form-control" >
+                          <option v-for="i in dataReceiveMoney.receiveFrom" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Description :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="description" type="text" class="form-control">
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Amount :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                        <input v-model="amount" type="number" class="form-control">
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Memo :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="memo" type="text" class="form-control">
                       </div>
                       <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Atechment:</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <label class="form-control-label">Attechment:</label>
+                        <input v-model="attechment" type="text" class="form-control">
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Total :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                        <input v-model="total" type="number" class="form-control">
                       </div>
                     </div>
                   </div>
@@ -249,8 +249,57 @@
 </template>
 
 <script>
-// @ is an alias to /src
-export default {
-  name: 'cashBankReceiveMoney'
-};
+import { Vue, Component } from 'vue-property-decorator';
+import cashBank from '@/store/modules/cashbank'
+
+@Component
+export default class ReceiveMoney extends Vue {
+  total = ''
+  dataDeposit = ''
+  dataReceive = ''
+  dataPayer = ''
+  totalAmount = ''
+  transactionDate = ''
+  transactionNo = ''
+  description = ''
+  amount = ''
+  memo = ''
+  attechment = ''
+
+  mounted () {
+    this.$store.dispatch('getDataReceiveMoney');
+  }
+
+  get dataReceiveMoney(){
+      return this.$store.getters.dataReceiveMoney;
+    }
+
+  setDataDepositTo(selectedIndex) {
+    console.log("fandu value", this.$store.getters.dataReceiveMoney.depositTo[selectedIndex])
+  }
+
+  setDataPayer(selectedIndex) {
+    console.log("fandu value", this.$store.getters.dataReceiveMoney.payer[selectedIndex])
+  }
+
+  setDataReceiveFrom(selectedIndex) {
+    console.log("fandu value", this.$store.getters.dataReceiveMoney.receiveFrom[selectedIndex])
+  }
+
+  submitDataReceiveMoney(){
+    cashBank.dataReceiveMoney({
+      total: this.total,
+      data_deposit: this.dataDeposit,
+      data_receive: this.dataReceive,
+      data_payer: this.dataPayer,
+      total_amount: this.totalAmount,
+      transaction_date: this.transactionDate,
+      transaction_no: this.transactionNo,
+      description: this.description,
+      amount: this.amount,
+      memo: this.memo,
+      attechment: this.attechment
+    })
+  }
+}
 </script>

@@ -237,8 +237,8 @@
 												</div>
 											</a>
 											<div class="kt-notification__custom kt-space-between">
-												<router-link :to="{ name: 'logout' }" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</router-link>
-
+												<!-- <router-link :to="{ name: 'logout' }" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</router-link> -->
+												<button @click="logout()" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</button>
 												<a href="custom/user/login-v2.html" target="_blank" class="btn btn-clean btn-sm btn-bold">Upgrade Plan</a>
 											</div>
 										</div>
@@ -250,3 +250,15 @@
 				<!-- end:: Header Topbar -->
 		</div>
 </template>
+
+<script>
+import { Vue, Component } from 'vue-property-decorator';
+import store from '@/store'
+
+@Component
+export default class Header extends Vue {
+	logout(){
+		store.dispatch('destroyToken')
+	}
+}
+</script>

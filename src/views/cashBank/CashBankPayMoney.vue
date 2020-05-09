@@ -156,7 +156,7 @@
               </div>
             </div>
             <!--begin::Form-->
-            <form class="kt-form kt-form--label-right" id="kt_form_2">
+            <form class="kt-form kt-form--label-right" id="app" @submit.prevent="submitDataPayMoney" method="post">
               <div class="kt-portlet__body">
                 <div class="kt-section">
                   <h3 class="kt-section__title">
@@ -166,95 +166,95 @@
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Pay From :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="payForm" class="form-control" name="billing_card_exp_month">
+                          <option v-for="i in dataPayMoney.depositTo" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Total Amount:</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="totalAmount" type="text" name="billing_card_name" class="form-control" placeholder="" value="">
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Pay :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="dataPay" class="form-control" name="billing_card_exp_month">
+                          <option v-for="i in dataPayMoney.depositTo" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Transaction Date :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="transactionDate" type="text" name="billing_card_name" class="form-control" placeholder="" value="">
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Transaction No :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                        <input v-model="transactionNo" type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Payment For Account :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="paymentForAccount" class="form-control" name="billing_card_exp_month">
+                          <option v-for="i in dataPayMoney.depositTo" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Description :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="description" type="text" name="billing_card_name" class="form-control" placeholder="" value="">
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Amount :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                        <input v-model="amount" type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-3 form-group-sub">
                         <label class="form-control-label">Payment For Account :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="paymentForAccountTwo" @change="setPaymentAccount($event.target.selectedIndex)" class="form-control" name="billing_card_exp_month">
+                          <option v-for="i in dataPayMoney.depositTo" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-3 form-group-sub">
                         <label class="form-control-label">Description :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="descriptionTwo" type="text" name="billing_card_name" class="form-control" placeholder="" value="">
                       </div>
                       <div class="col-lg-2 form-group-sub">
                         <label class="form-control-label">Total :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                        <input v-model="total" type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
                       </div>
                       <div class="col-lg-2 form-group-sub">
                         <label class="form-control-label">Balence Due :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                        <input v-model="balanceDue" type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
                       </div>
-                      <div class="col-lg-2 form-group-sub">
-                        <label class="form-control-label">Amount :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                      <div class="col-lg-4 form-group-sub">
+                        <label class="form-control-label">Amount Two :</label>
+                        <input v-model="amountTwo" type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Memo :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="memo" type="text" name="billing_card_name" class="form-control" placeholder="" value="">
                       </div>
                       <div class="col-lg-4 form-group-sub">
-                        <label class="form-control-label">Atechment:</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <label class="form-control-label">Attechment:</label>
+                        <input v-model="attechment" type="text" name="billing_card_name" class="form-control" placeholder="" value="">
                       </div>
                     </div>
                     <div class="form-group form-group-last row">
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Sub Total :</label>
-                        <select class="form-control" name="billing_card_exp_month">
-                          <option value="">Select</option>
+                        <select v-model="subTotal" class="form-control" name="billing_card_exp_month">
+                          <option v-for="i in dataPayMoney.depositTo" :key="i.id">{{ i.user }}</option>
                         </select>
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Total Paid :</label>
-                        <input type="text" name="billing_card_name" class="form-control" placeholder="" value="">
+                        <input v-model="totalPaid" type="text" name="billing_card_name" class="form-control" placeholder="" value="">
                       </div>
                       <div class="col-lg-4 form-group-sub">
                         <label class="form-control-label">Total (Remain) :</label>
-                        <input type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
+                        <input v-model="totalRemain" type="number" class="form-control" name="billing_card_cvv" placeholder="" value="">
                       </div>
                     </div>
                   </div>
@@ -283,8 +283,63 @@
 </template>
 
 <script>
-// @ is an alias to /src
-export default {
-  name: 'cashBankPayMoney'
-};
+import { Vue, Component } from 'vue-property-decorator';
+import cashBank from '@/store/modules/cashbank'
+
+@Component
+export default class PayMoney extends Vue {
+  payForm = ''
+  totalAmount = ''
+  dataPay = ''
+  transactionDate = ''
+  transactionNo = ''
+  paymentForAccount = ''
+  description = ''
+  amount = ''
+  paymentForAccountTwo = ''
+  descriptionTwo = ''
+  total = ''
+  balanceDue = ''
+  amountTwo = ''
+  memo = ''
+  attechment = ''
+  subTotal = ''
+  totalPaid = ''
+  totalRemain = ''
+
+  mounted () {
+    this.$store.dispatch('getDataPayMoney');
+  }
+
+  get dataPayMoney(){
+    return this.$store.getters.dataPayMoney;
+  }
+
+  setPaymentAccount(selectedIndex) {
+    console.log("fandu value", this.$store.getters.dataPayMoney.depositTo[selectedIndex])
+  }
+
+  submitDataPayMoney(){
+    cashBank.dataPayMoney({
+      pay_from: this.payForm,
+      total_amount: this.totalAmount,
+      pay: this.dataPay,
+      transaction_date: this.transactionDate,
+      transaction_no: this.transactionNo,
+      payment_for_account: this.paymentForAccount,
+      description: this.description,
+      amount: this.amount,
+      payment_for_account_two: this.paymentForAccountTwo,
+      description_two: this.descriptionTwo,
+      total: this.total,
+      balence_due: this.balanceDue,
+      amount_two: this.amountTwo,
+      memo: this.memo,
+      attechment: this.attechment,
+      sub_total: this.subTotal,
+      total_paid: this.totalPaid,
+      total_remain: this.totalRemain,
+    })
+  }
+}
 </script>

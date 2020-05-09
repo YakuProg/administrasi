@@ -31,13 +31,44 @@
         "id" : 1,
         "depositTo" : [
           {
-            "user" : "user1"
+            "id" : 1,
+            "user" : "fandu"
           },
           {
-            "user" : "user2"
+            "id" : 2,
+            "user" : "ezra"
           },
           {
-            "user" : "user3"
+            "id" : 3,
+            "user" : "fikri"
+          }
+        ],
+        "payer" : [
+          {
+            "id" : 1,
+            "user" : "payer 1"
+          },
+          {
+            "id" : 2,
+            "user" : "payer 2"
+          },
+          {
+            "id" : 3,
+            "user" : "payer 3"
+          }
+        ],
+        "receiveFrom" : [
+          {
+            "id" : 1,
+            "user" : "receive 1"
+          },
+          {
+            "id" : 2,
+            "user" : "receive 2"
+          },
+          {
+            "id" : 3,
+            "user" : "receive 3"
           }
         ]
       },
@@ -45,13 +76,13 @@
         "id" : 1,
         "payFrom" : [
           {
-            "user" : "user1"
+            "user" : "pay money user"
           },
           {
-            "user" : "user2"
+            "user" : "pay money user2"
           },
           {
-            "user" : "user3"
+            "user" : "pay money user3"
           }
         ]
       }

@@ -155,7 +155,9 @@ export default {
           password: this.password
         })
         .then(response => {
-          this.$router.push({ name: "home" });
+          // this.$router.push({ name: "home" });
+          // this.$router.replace('/');
+          window.location.reload()
         });
     }
   }
