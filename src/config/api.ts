@@ -1,4 +1,4 @@
-const isDev = false;
+const isDev = true;
 
 const URL = isDev ? 'http://localhost:8089' : 'http://34.87.96.194'
 
